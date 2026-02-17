@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngita kag loyal nga Tao</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4267B2, #052750);
+            color: white;
+        }
+        
+        .search-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            width: 250px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #4267B2;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        button:hover {
+            background: #ffffffaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="search-box">
+        <h2>Ngita kag loyal nga Tao ?</h2>
+        <input type="text" id="searchInput" placeholder="Choose 1 to 10...">
+        <button onclick="redirectFacebook()">Search</button>
+    </div>
+
+    <script>
+        function redirectFacebook() {
+            const searchValue = document.getElementById("searchInput").value;
+            if (searchValue.trim() !== "") {
+                // Facebook link mo
+                const facebookLink = "http://127.0.0.1:5500/videoclip.html";
+                window.location.href = facebookLink;
+            } else {
+                alert("Please type something before searching!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
